@@ -39,10 +39,6 @@
    webpackFun(cb)
  })
 
- gulp.task('build:webpack', (cb) => {
-   webpackFun(cb, true)
- })
-
  gulp.task('watch', () => {
    gulp.watch(`${config.views.watchSrc}/**/*.html`, ['swig'])
    gulp.watch([`${config.root.dist}`], browserSync.reload)
@@ -61,6 +57,9 @@
 
  gulp.task('default', ['clean', 'swig', 'webpack', 'watch', 'server'])
 
- gulp.task('build', () => {
-   runSequence('clean', 'swig', 'build:webpack')
+ gulp.task('build', ['clean', 'swig'], (cb) => {
+   //waiting htmlfile generate
+   setTimeout(() => {
+     webpackFun(cb, true)
+   }, 800)
  })
