@@ -17,7 +17,7 @@
  })
 
  gulp.task('swig', () => {
-   gulp.src(`${config.views.src}/*.html`)
+   gulp.src(`${config.views.src}/**/*.html`)
      .pipe(swig())
      .pipe(gulp.dest(config.views.dist))
  })
@@ -48,9 +48,10 @@
  })
 
  gulp.task('server', () => {
-   browserSync.init({
-     server: {
-       baseDir: [config.root.dist, config.views.dist]
+   browserSync.create().init({
+     serveStatic: [config.root.dist],
+     serveStaticOptions: {
+       extensions: ['html', 'htm'] // pretty urls
      },
      open: false,
      port: config.port.dev,
