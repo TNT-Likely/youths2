@@ -1,0 +1,10 @@
+.idea/
+node_modules/
+.DS_Store
+*.log
+tmp
+lib/
+*.tgz
+dist/
+dist-api/
+.tmp
