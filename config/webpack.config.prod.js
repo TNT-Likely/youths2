@@ -1,5 +1,6 @@
 import _default from './webpack.config.base'
 import webpack from 'webpack'
+import config from './index'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import RevReplacePlugin from 'webpack-rev-replace-plugin'
 
@@ -20,7 +21,7 @@ export default function(platform) {
   options.plugins.push(new webpack.optimize.UglifyJsPlugin({ compress: { drop_console: true } }))
   options.plugins.push(new ExtractTextPlugin('style/[name].[contenthash:6].css'))
   options.plugins.push(new RevReplacePlugin({
-    cwd: `./dist/views`,
+    cwd: `${config.views.dist}`,
     files: '**/*.html',
     outputPageName: function(filename) {
       return `./views/${filename}`
