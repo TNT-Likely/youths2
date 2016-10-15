@@ -15,9 +15,7 @@
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-swig": "^0.8.0",
-    "gulp-util": "^3.0.7"
-  },
-  "dependencies": {
+    "gulp-util": "^3.0.7",
     "babel-loader": "^6.2.5",
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
@@ -29,5 +27,8 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.9.11",
     "webpack-rev-replace-plugin": "^0.0.4"
+  },
+  "dependencies": {
+
   }
 }
