@@ -24,7 +24,7 @@ export default function(platform) {
     cwd: `${config.views.dist}`,
     files: '**/*.html',
     outputPageName: function(filename) {
-      return `./views/${filename}`
+      return `./${filename}`
     },
     modifyReved: function(filename) {
       return filename.replace(/(\/style\/|\/script\/)/, '')
