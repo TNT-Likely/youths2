@@ -4,7 +4,6 @@
  import gutil from 'gulp-util'
  import del from 'del'
  import browserSync from 'browser-sync'
- import runSequence from 'run-sequence'
  import webpack from 'webpack'
  import webpackConfDev from './config/webpack.config.dev'
  import webpackConfProd from './config/webpack.config.prod'
