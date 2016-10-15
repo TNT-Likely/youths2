@@ -50,8 +50,7 @@
  gulp.task('server', () => {
    browserSync.init({
      server: {
-       baseDir: config.root.dist,
-       index: `views/index.html`
+       baseDir: [config.root.dist, config.views.dist]
      },
      open: false,
      port: '8090',
