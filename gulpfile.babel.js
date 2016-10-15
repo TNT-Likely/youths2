@@ -22,20 +22,24 @@
      .pipe(gulp.dest(config.views.dist))
  })
 
- let webpackFun = (cb, isProd) => {
+ let webpackFun = (isProd) => {
    let options = isProd ? webpackConfProd() : webpackConfDev()
    webpack(options, function(err, stats) {
      if (err) throw new gutil.PluginError("webpack", err);
-     gutil.log(stats.compilation.errors.toString({
+     gutil.log('[webpack]', gutil.colors.red(stats.compilation.errors.toString({
        colors: true
-     }))
-     gutil.log(`<<<<<<<webpack 编译成功>>>>>>>`)
-     cb()
+     })))
+     gutil.log('[webpack]', gutil.colors.yellow(stats.compilation.warnings.toString({
+       colors: true
+     })))
+     gutil.log('[webpack]', gutil.colors.green(stats.toString({
+       colors: true
+     })))
    })
  }
 
- gulp.task('webpack', (cb) => {
-   webpackFun(cb)
+ gulp.task('webpack', () => {
+   webpackFun()
  })
 
  gulp.task('watch', () => {
@@ -56,9 +60,9 @@
 
  gulp.task('default', ['clean', 'swig', 'webpack', 'watch', 'server'])
 
- gulp.task('build', ['clean', 'swig'], (cb) => {
+ gulp.task('build', ['clean', 'swig'], () => {
    //waiting htmlfile generate
    setTimeout(() => {
-     webpackFun(cb, true)
+     webpackFun(true)
    }, 800)
  })
