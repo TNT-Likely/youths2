@@ -11,11 +11,6 @@ export default {
     dist: path.join(__dirname, '../dist/views')
   },
   script: {
-    src: path.join(__dirname, '../app/js/modules'),
-    dist: path.join(__dirname, '../dist/script')
-  },
-  style: {
-    src: path.join(__dirname, '../app/scss/pages'),
-    dist: path.join(__dirname, '../dist/style')
+    src: path.join(__dirname, '../app/js/modules')
   }
 }
