@@ -53,7 +53,7 @@
        baseDir: [config.root.dist, config.views.dist]
      },
      open: false,
-     port: '8090',
+     port: config.port.dev,
    })
  })
 
