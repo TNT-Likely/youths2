@@ -4,8 +4,9 @@
   "description": "",
   "main": "gulpfile.babel.js",
   "scripts": {
+    "start": "gulp",
     "compile": "gulp build && babel deploy.js --out-dir dist && babel config/index.js --out-file dist/config.js",
-    "deploy": "pm2 start dist/deploy.js --name='youths2'"
+    "deploy": "npm run compile && pm2 start dist/deploy.js --name='youths2'"
   },
   "author": "",
   "license": "ISC",
