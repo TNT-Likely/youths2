@@ -44,7 +44,9 @@
 
  gulp.task('watch', () => {
    gulp.watch(`${config.views.watchSrc}/**/*.html`, ['swig'])
-   gulp.watch([`${config.root.dist}`], browserSync.reload)
+   setTimeout(() => {
+     gulp.watch([`${config.root.dist}/**/**`], browserSync.reload)
+   }, 800)
  })
 
  gulp.task('server', () => {
@@ -54,7 +56,7 @@
        extensions: ['html', 'htm'] // pretty urls
      },
      open: false,
-     port: config.port.dev,
+     port: config.port.dev
    })
  })
 
