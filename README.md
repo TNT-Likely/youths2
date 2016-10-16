@@ -23,8 +23,8 @@ web project templete
 │   └── index.js                // web project index config
 ├── app/                        // bussiness code
 │   ├── js/                     // js file
-│   │   ├── components/          // js public components(not compile to dist floder)
-│   │   └── modules            // js modules (will be compile to dist floder)
+│   │   ├── components/         // js public components(not compile to dist floder)
+│   │   └── modules             // js modules (will be compile to dist floder)
 │   ├── scss/                   // scss file
 │   ├── img/                    // img file
 │   └── views                   // views file
