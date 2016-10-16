@@ -26,8 +26,11 @@ export default function(platform) {
     outputPageName: function(filename) {
       return `./${filename}`
     },
+    modifyUnreved: function(filename) {
+      return filename.replace(/(\\)/, '/')
+    },
     modifyReved: function(filename) {
-      return filename.replace(/(\/style\/|\/script\/)/, '')
+      return filename.replace(/(\/style\/|\/script\/)/, '').replace('\\', '/')
     }
   }))
   return options

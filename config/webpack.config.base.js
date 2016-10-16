@@ -26,7 +26,7 @@ export default function() {
   }
 
   glob.sync(`${config.script.src}/**/*.js`).forEach((files) => {
-    let entry_name = path.basename(files).split('.')[0]
+    let entry_name = path.relative(config.script.src, files).split('.')[0]
     _default.entry[entry_name] = files
   })
 
