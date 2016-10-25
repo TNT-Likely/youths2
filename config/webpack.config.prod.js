@@ -15,6 +15,9 @@ export default function(platform) {
     test: /\.scss$/,
     loader: ExtractTextPlugin.extract('css?minimize!sass')
   }, {
+    test: /\.css$/,
+    loader: ExtractTextPlugin.extract('css?minimize')
+  }, {
     test: /\.html$/,
     loader: 'html'
   })

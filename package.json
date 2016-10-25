@@ -13,6 +13,7 @@
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-latest": "^6.16.0",
     "browser-sync": "^2.17.3",
     "css-loader": "^0.25.0",
@@ -33,6 +34,7 @@
     "webpack-rev-replace-plugin": "^0.1.1"
   },
   "dependencies": {
-    "echarts": "^3.2.3"
+    "echarts": "^3.2.3",
+    "npm-zepto": "^1.1.7"
   }
 }
