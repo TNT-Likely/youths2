@@ -13,7 +13,8 @@ export default (url, type, data) => {
         resolve(result)
       },
       error: function(err) {
-        toast('网络连接失败')
+        // toast('网络连接失败')
+        console.log('网络连接失败')
       }
     })
   })
