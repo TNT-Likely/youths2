@@ -1,3 +1,7 @@
 require('../../../scss/pages/index.scss')
 
-console.log('page index')
+import fetch from '../../components/fetch'
+
+fetch('/').then(r => {
+
+})
