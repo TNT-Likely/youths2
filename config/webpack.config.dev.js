@@ -13,6 +13,9 @@ export default function() {
   }, {
     test: /\.scss$/,
     loader: ExtractTextPlugin.extract('css!sass')
+  }, {
+    test: /\.css$/,
+    loader: ExtractTextPlugin.extract('css')
   })
   options.plugins.push(new ExtractTextPlugin('style/[name].css'))
 
