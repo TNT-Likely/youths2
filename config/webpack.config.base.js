@@ -22,7 +22,7 @@ export default function() {
       presets: ['latest']
     },
     resolve: {
-      modulesDirectories: [path.join(__dirname, '../node_modules'), path.join(__dirname, '../app/js/components')]
+      modulesDirectories: ['../node_modules', '../app/js/components']
     },
     plugins: []
   }
