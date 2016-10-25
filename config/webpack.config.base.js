@@ -21,7 +21,9 @@ export default function() {
     babel: {
       presets: ['latest']
     },
-    resolve: {},
+    resolve: {
+      modulesDirectories: [path.join(__dirname, '../node_modules'), path.join(__dirname, '../app/js/components')]
+    },
     plugins: []
   }
 
