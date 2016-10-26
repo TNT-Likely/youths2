@@ -12,32 +12,42 @@ require('../../scss/pages/index.scss')
 let myChart = echarts.init(document.getElementById('main'))
 
 myChart.setOption({
-  title: { text: 'ECharts 入门示例' },
+  title: { text: 'ECharts 入门示例', subtext: '测试副标题' },
+  legend: {
+    itemWidth: 1
+  },
   tooltip: {},
   xAxis: {
-    data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+    data: [],
+    axisLine: {},
+    axisTick: {
+      alignWithLabel: true,
+      length: 10
+    }
   },
   yAxis: {},
   series: [{
-    name: '销量',
+    name: '得分',
     type: 'bar',
-    data: [5, 20, 36, 10, 10, 20]
+    data: []
   }]
 })
 
+myChart.showLoading()
+
 fetch('/nba/stats/leagueleaders?LeagueID=00&PerMode=PerGame&Scope=S&Season=2016-17&SeasonType=Pre+Season&StatCategory=PTS').then(r => {
   let data = r.data.resultSet.rowSet.slice(0, 11)
-  console.log(data)
+
   myChart.setOption({
     xAxis: {
-      data: _.map(data, '2')
-    }
-  })
-  myChart.setOption({
+      data: _.map(data, 2)
+    },
     series: [{
       name: '得分',
       type: 'bar',
       data: _.map(data, 22)
     }]
   })
+
+  myChart.hideLoading()
 })
