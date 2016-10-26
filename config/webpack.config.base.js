@@ -24,6 +24,10 @@ export default function() {
     resolve: {
       modulesDirectories: ['../node_modules', '../app/js/components']
     },
+    sassLoader: {
+      includePaths: ['../node_modules'],
+      sourceMapEmbed: true
+    },
     plugins: []
   }
 
