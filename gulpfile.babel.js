@@ -18,7 +18,9 @@
 
  gulp.task('swig', () => {
    gulp.src(`${config.views.src}/**/*.html`)
-     .pipe(swig({ defaults: { cache: false } }))
+     .pipe(swig({
+       defaults: { cache: false, varControls: ['<%=', '%>'] }
+     }))
      .pipe(gulp.dest(config.views.dist))
  })
 

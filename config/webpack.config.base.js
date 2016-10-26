@@ -22,7 +22,14 @@ export default function() {
       presets: ['latest']
     },
     resolve: {
-      modulesDirectories: ['../node_modules', '../app/js/components']
+      modulesDirectories: ['../node_modules', '../app/js/components'],
+      alias: {
+        'vue$': 'vue/dist/vue.js'
+      }
+    },
+    sassLoader: {
+      includePaths: ['../node_modules'],
+      sourceMapEmbed: true
     },
     plugins: []
   }

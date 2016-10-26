@@ -33,8 +33,10 @@
     "webpack-rev-replace-plugin": "^0.1.1"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0-alpha.5",
     "echarts": "^3.2.3",
     "lodash": "^4.16.4",
-    "npm-zepto": "^1.1.7"
+    "npm-zepto": "^1.1.7",
+    "vue": "^2.0.3"
   }
 }
