@@ -1,11 +1,11 @@
-// Core variables and mixins
-@import "~bootstrap/scss/custom";
-// @import "~bootstrap/scss/variables";
-@import 'bootstrapVarOverwrite';
-@import "~bootstrap/scss/mixins";
-// Reset and dependencies
-@import "~bootstrap/scss/normalize";
-@import "~bootstrap/scss/print";
-// Utility classes
-@import "~bootstrap/scss/utilities";
-$red:#ff0000;
+@import "~normalize.css";
+@import 'var';
+body {
+  background-color: #f1f1f1;
+}
+
+#app {
+  margin: 30px 20px;
+  background-color: #fff;
+  overflow: hidden;
+}

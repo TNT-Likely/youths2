@@ -1,5 +1,13 @@
 @import 'base';
 .header {
-  min-height: 500px;
-  background-color: $brand-primary;
+  height: 70px;
+  background-color: #fff;
+  border-bottom: 5px solid $brand-primary;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    li {
+      float: left;
+    }
+  }
 }
