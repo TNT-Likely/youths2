@@ -1,4 +1,21 @@
 {% extends '../layouts/index.html' %} {% block content %}
-<div id="main"></div>
+<div class="container" id="app">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th v-for="i in items"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="i in items">
+        <td v-text="i[2]"></td>
+        <td v-text="i[3]"></td>
+        <td v-text="i[4]"></td>
+        <td v-text="i[5]"></td>
+        <td v-text="i[6]"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <link href="/style/index.css" rel='stylesheet' />
 <script src="/script/index.js"></script> {% endblock %}

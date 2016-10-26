@@ -1,4 +1,3 @@
-import toast from './toast'
 window.$ = window.Zepto = require('npm-zepto')
 let host = window.location.href.indexOf('youths.cc') > -1 ? 'http://api2.youths.cc' : 'http://localhost:3030'
 
