@@ -1,8 +1,9 @@
-@import '../components/var';
-
-body{
-	background-image: url(../../img/1.jpg);
-}
-.red {
-  color: $red;
+@import '~normalize.css';
+@import '../components/mixins';
+@import '../components/common';
+@import '../components/header';
+.slider {
+  background: url(../../img/index_bg.jpg) no-repeat;
+  background-size: 100% 100% center;
+  padding: 200px 0;
 }

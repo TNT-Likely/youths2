@@ -1,0 +1,18 @@
+@import './var';
+.container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: $f_base;
+}
