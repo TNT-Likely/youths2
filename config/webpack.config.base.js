@@ -21,7 +21,13 @@ export default function() {
     babel: {
       presets: ['latest']
     },
-    resolve: {},
+    resolve: {
+      modulesDirectories: ['../node_modules', '../app/js/components']
+    },
+    sassLoader: {
+      includePaths: ['../node_modules'],
+      sourceMapEmbed: true
+    },
     plugins: []
   }
 
