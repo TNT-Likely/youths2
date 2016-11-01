@@ -1,0 +1,20 @@
+@import './var';
+@import './mixins';
+.footer {
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: $c_primary;
+  .social {
+    padding-top: 10px;
+    i {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      &.wechat {
+        background: url(../../img/iwechat.png) no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
