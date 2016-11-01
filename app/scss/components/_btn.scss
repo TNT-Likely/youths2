@@ -1,0 +1,9 @@
+@import './var';
+@import './mixins';
+.btn-primary {
+  @include btn($c_primary, $c_primary_hover);
+}
+
+.btn-primary-outline {
+  @include btn-outline($c_primary);
+}

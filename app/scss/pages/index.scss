@@ -1,9 +1,13 @@
 @import '~normalize.css';
 @import '../components/mixins';
 @import '../components/common';
+@import '../components/grid';
 @import '../components/header';
+@import '../components/btn';
 .slider {
-  background: url(../../img/index_bg.jpg) no-repeat;
-  background-size: 100% 100% center;
+  background: url(../../img/index_bg1.jpg) no-repeat;
+  background-size: 100% 100%;
   padding: 200px 0;
+  text-align: center;
+  height: 100%;
 }

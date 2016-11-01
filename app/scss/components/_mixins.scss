@@ -1,0 +1,28 @@
+@import './var';
+$border-radius: 30px;
+%plr {
+  padding-left: 30px;
+  padding-right: 30px;
+  transition: all .3s ease-in-out;
+}
+
+@mixin btn($color, $color_hover) {
+  @extend %plr;
+  background-color: $color;
+  border-radius: $border-radius;
+  &:hover {
+    background-color: $color_hover;
+  }
+}
+
+@mixin btn-outline($color) {
+  @extend %plr;
+  background-color: #fff;
+  border-radius: $border-radius;
+  border: 1px solid $color;
+  color: $color;
+  &:hover {
+    background-color: $color;
+    color: #fff;
+  }
+}

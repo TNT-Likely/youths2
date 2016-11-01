@@ -27,11 +27,10 @@
     margin-bottom: 0;
     li {
       float: left;
+      padding: 15px;
       a {
         display: inline-block;
-        line-height: 70px;
-        padding-left: 30px;
-        padding-right: 30px;
+        line-height: 40px;
         font-size: $f_big;
         transition: all 0.4s cubic-bezier(.7, 1, .7, 1);
       }
@@ -47,5 +46,9 @@
         border-bottom: 3px solid $c_primary;
       }
     }
+  }
+  //overwrite
+  .btn-primary-outline {
+    background-color: transparent;
   }
 }

@@ -1,0 +1,26 @@
+    @import './var';
+    @import './mixins';
+    $columns:12;
+    @media (min-width: 640px) {
+      @for $i from 1 through $columns {
+        .col-#{$i} {
+          float: left;
+          width: percentage($i / $columns);
+        }
+        .col-offset-#{$i} {
+          margin-left: percentage($i / $columns);
+        }
+      }
+    }
+    
+    @media (max-width: 640px) {
+      @for $i from 1 through $columns {
+        .col-m-#{$i} {
+          float: left;
+          width: percentage($i / $columns);
+        }
+        .col-offset-m-#{$i} {
+          margin-left: percentage($i / $columns);
+        }
+      }
+    }
