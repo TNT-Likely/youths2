@@ -1,7 +1,7 @@
     @import './var';
     @import './mixins';
     $columns:12;
-    @media (min-width: 640px) {
+    @media (min-width: 641px) {
       @for $i from 1 through $columns {
         .col-#{$i} {
           float: left;
@@ -13,7 +13,7 @@
       }
     }
     
-    @media (max-width: 640px) {
+    @media (max-width: 641px) {
       @for $i from 1 through $columns {
         .col-m-#{$i} {
           float: left;
