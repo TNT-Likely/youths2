@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp",
     "compile": "gulp build && babel deploy.js --out-dir dist && babel config/index.js --out-file dist/config.js",
-    "deploy": "npm run compile && pm2 start dist/deploy.js --name='youths2'"
+    "deploy": "npm run compile && pm2 start deploy.json"
   },
   "author": "",
   "license": "ISC",
