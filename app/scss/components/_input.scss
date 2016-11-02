@@ -1,0 +1,20 @@
+@import './var';
+@import './mixins';
+input {
+  font-size: $f_big;
+  height: 40px;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  border-radius: 30px;
+  padding-left: 15px;
+  transition: border-color .5s ease-in-out;
+  border: 3px solid transparent;
+  &::placeholder {
+    text-align: center;
+  }
+  &:focus,
+  &.active {
+    // border-color: $c_primary;
+  }
+}

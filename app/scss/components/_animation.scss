@@ -1,0 +1,19 @@
+@import './var';
+@import './mixins';
+$animation_duration:1s;
+$animation_delay:.6s;
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.a-fadeIn {
+  animation-name: fadeInLeft;
+  animation-duration: $animation_duration;
+  animation-delay: $animation_delay;
+  animation-fill-mode: both;
+}

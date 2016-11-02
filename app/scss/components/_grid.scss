@@ -1,11 +1,14 @@
     @import './var';
     @import './mixins';
     $columns:12;
+    $grap:10px;
     @media (min-width: 641px) {
       @for $i from 1 through $columns {
         .col-#{$i} {
           float: left;
           width: percentage($i / $columns);
+          padding-left: $grap;
+          padding-right: $grap;
         }
         .col-offset-#{$i} {
           margin-left: percentage($i / $columns);
@@ -18,6 +21,8 @@
         .col-m-#{$i} {
           float: left;
           width: percentage($i / $columns);
+          padding-left: $grap;
+          padding-right: $grap;
         }
         .col-offset-m-#{$i} {
           margin-left: percentage($i / $columns);
