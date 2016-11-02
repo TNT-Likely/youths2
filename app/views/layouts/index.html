@@ -2,14 +2,13 @@
 <html>
 
 <head>
-  <meta charset="utf-8" />
-  <title></title>
+  <meta charset="utf-8" /> {% block header %}{% endblock %}
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 </head>
 
 <body>
-  <header class="header">
-    <a class="brand"><span>Y</span>ouths</a>
+  <header class="header {% block headerClass %}{% endblock %}">
+    <a class="brand" href="/"><span>Y</span>ouths</a>
     <ul class="nav">
       <li><a href="/">首页</a></li>
       <li><a href="/user/login" class="btn-primary">登录</a></li>
@@ -23,6 +22,7 @@
       <i class="wechat"></i>
     </div>
   </footer>
+  {% block footer %}{% endblock %}
 </body>
 
 </html>
