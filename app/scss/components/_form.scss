@@ -1,0 +1,28 @@
+@import './var';
+@import './mixins';
+.form {
+  padding: $form_padding;
+  input {
+    width: 100%;
+    height: $input_height;
+    border-radius: $input_radius;
+    padding-left: $input_padding_left;
+  }
+  button {
+    width: 100%;
+  }
+  .form-block {
+    margin-bottom: 20px;
+    &.vcode {
+      position: relative;
+      span {
+        @include inline-block(100px, $input_height);
+        background: #000;
+        position: absolute;
+        border-bottom-right-radius: $input_radius;
+        border-top-right-radius: $input_radius;
+        right: 0;
+      }
+    }
+  }
+}

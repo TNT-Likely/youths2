@@ -1,1 +1,2 @@
-// require('resolve-url!../../../scss/pages/user/login.scss')
+require('../../../scss/pages/user/login.scss')
+require('captcha')

@@ -25,7 +25,6 @@ export default function() {
       modulesDirectories: ['../node_modules', '../app/js/components']
     },
     sassLoader: {
-      includePaths: ['../node_modules'],
       sourceMapEmbed: true
     },
     plugins: []

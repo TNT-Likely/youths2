@@ -1,6 +1,6 @@
 import toast from './toast'
 window.$ = window.Zepto = require('npm-zepto')
-let host = window.location.href.indexOf('youths.cc') ? 'http://api2.youths.cc' : 'http://localhost:3030'
+let host = window.location.href.indexOf('youths.cc') > -1 ? 'http://a.youths.cc' : 'http://localhost:3030'
 
 
 export default (url, type, data) => {

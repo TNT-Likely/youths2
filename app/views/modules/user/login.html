@@ -1,6 +1,24 @@
 {% extends '../../layouts/index.html' %} {% block headerClass %}static{% endblock %}{% block content %}
 <div class="body">
-	user index page
+  <div class="form col-4 col-offset-4 col-m-12">
+    <div class="form-block">
+      <input type="text" placeholder="输入用户名">
+    </div>
+    <div class="form-block">
+      <input type="text" placeholder="输入邮箱">
+    </div>
+    <div class="form-block">
+      <input type="password" placeholder="输入密码">
+    </div>
+    <div class="form-block">
+      <input type="password" placeholder="再次输入密码">
+    </div>
+    <div class="form-block vcode">
+      <input type="text" placeholder="输入验证码"><span class="vcodeImg"></span>
+    </div>
+    <div class="form-block"></div>
+    <button class="btn-primary">立即注册</button>
+  </div>
 </div>
 <link href="/style/user/login.css" rel='stylesheet' />
 <script src="/script/user/login.js"></script> {% endblock %}

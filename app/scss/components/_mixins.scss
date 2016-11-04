@@ -1,5 +1,4 @@
 @import './var';
-$border-radius: 30px;
 %plr {
   padding-left: 30px;
   padding-right: 30px;
@@ -14,10 +13,18 @@ $border-radius: 30px;
   }
 }
 
+%btn {
+  line-height: $button_height;
+  border-radius: $button_radius;
+}
+
 @mixin btn($color, $color_hover) {
   @extend %plr;
+  @extend %btn;
   background-color: $color;
-  border-radius: $border-radius;
+  border-color: transparent;
+  outline: 0;
+  color: #fff;
   &:hover {
     background-color: $color_hover;
   }
@@ -25,8 +32,8 @@ $border-radius: 30px;
 
 @mixin btn-outline($color) {
   @extend %plr;
+  @extend %btn;
   background-color: #fff;
-  border-radius: $border-radius;
   border: 1px solid $color;
   color: $color;
   &:hover {
