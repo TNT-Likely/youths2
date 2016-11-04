@@ -1,19 +1,39 @@
 @import './var';
 @import './mixins';
 .footer {
-  padding: 20px;
+  $height: 30px;
+  @extend %clearfix;
+  padding: 10px;
   color: #fff;
-  text-align: center;
+  text-align: left;
   background-color: $c_primary;
+  clear: both;
+  .coryight,
   .social {
-    padding-top: 10px;
-    i {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
+    line-height: $height;
+  }
+  .social {
+    span {
+      position: relative;
+      @include inline-block($height, $height);
       &.wechat {
-        background: url(../../img/iwechat.png) no-repeat;
-        background-size: 100% 100%;
+        @include bgi('iwechat.png');
+      }
+      &:hover {
+        i {
+          display: inline-block;
+        }
+      }
+      i {
+        top: -120px;
+        left: -30px;
+        position: absolute;
+        display: none;
+        width: 100px;
+        height: 100px;
+        &.wechat {
+          @include bgi('weixin.jpg');
+        }
       }
     }
   }
