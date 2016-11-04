@@ -40,10 +40,12 @@
     background-color: #fff;
     a {
       color: #000;
-      &:hover,
-      &.active {
-        color: $c_primary;
-        border-bottom: 3px solid $c_primary;
+      &.text {
+        &:hover,
+        &.active {
+          color: $c_primary;
+          border-bottom: 3px solid $c_primary;
+        }
       }
     }
   }
