@@ -12,7 +12,7 @@ export default function() {
     loader: 'url-loader?limit=8192&name=img/[name].[ext]'
   }, {
     test: /\.scss$/,
-    loader: ExtractTextPlugin.extract('css!sass')
+    loader: ExtractTextPlugin.extract('css!resolve-url!sass?sourceMap')
   }, {
     test: /\.css$/,
     loader: ExtractTextPlugin.extract('css')
