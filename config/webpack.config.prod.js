@@ -13,7 +13,7 @@ export default function(platform) {
     loader: 'url-loader?limit=8192&name=img/[name].[hash:6].[ext]'
   }, {
     test: /\.scss$/,
-    loader: ExtractTextPlugin.extract('css?minimize!resolve-url!sass')
+    loader: ExtractTextPlugin.extract('css?minimize!resolve-url!sass?sourceMap')
   }, {
     test: /\.css$/,
     loader: ExtractTextPlugin.extract('css?minimize')

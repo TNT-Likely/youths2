@@ -24,9 +24,7 @@ export default function() {
     resolve: {
       modulesDirectories: ['../node_modules', '../app/js/components']
     },
-    sassLoader: {
-      sourceMapEmbed: true
-    },
+    sassLoader: {},
     plugins: []
   }
 
