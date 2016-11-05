@@ -1,4 +1,24 @@
 {% extends '../../layouts/index.html' %} {% block headerClass %}static{% endblock %}{% block content %}
-<p class="red">user index page</p>
-<link href="/style/index.css" rel='stylesheet' />
-<script src="/script/user/index.js"></script> {% endblock %}
+<div class="body">
+  <div class="form col-4 col-offset-4 col-m-12">
+    <div class="form-block">
+      <input type="text" name='username' placeholder="输入用户名" regex='/^(\w{1,16}|[\u4e00-\u9fa5]{1,8})$/' msg='请输入1-16位字符或1-8个汉字作为你的用户名'>
+    </div>
+    <div class="form-block">
+      <input type="text" name='email' placeholder="输入邮箱" regex='/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/' msg="请输入有效邮箱,例如admin@youths.cc">
+    </div>
+    <div class="form-block">
+      <input type="password" name="password" regex="/^\S{6,16}$/" msg="请输入6-16位字符作为你的密码" placeholder="输入密码">
+    </div>
+    <div class="form-block">
+      <input type="password" name="password2" regex="/^\S{6,16}$/" msg="请输入6-16位字符作为你的确认密码" placeholder="再次输入密码">
+    </div>
+    <div class="form-block vcode">
+      <input type="text" name="vcode" placeholder="输入验证码"><span class="vcodeImg"></span>
+    </div>
+    <div class="form-block"></div>
+    <button class="btn-primary">立即注册</button>
+  </div>
+</div>
+<link href="/style/user/register.css" rel='stylesheet' />
+<script src="/script/user/register.js"></script> {% endblock %}

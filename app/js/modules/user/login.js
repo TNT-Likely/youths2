@@ -1,22 +1,29 @@
 require('../../../scss/pages/user/login.scss')
-require('captcha').default()
-import toast from 'toast'
-import fetch from 'fetch'
+require('header')
+import { toast, fetch, validate, query, cookies } from 'tool'
 
-$(document).on('blur', '[name="username"]', () => {
-  let username = $('[name="username"]').val()
-  fetch('/rest/user/exist', 'POST', { key: 'username', value: username }).then(r => {
-    console.log(r)
-  }).catch(e => {
-    toast(`用户名${username}已被使用`)
-  })
-})
+let val = (field) => {
+  return $(`[name=${field}]`).val()
+}
 
-$(document).on('blur', '[name="email"]', () => {
-  let email = $('[name="email"]').val()
-  fetch('/rest/user/exist', 'POST', { key: 'email', value: email }).then(r => {
-    console.log(r)
-  }).catch(e => {
-    toast(`邮箱${email}已被使用`)
-  })
+$('.form button').click(() => {
+  if (!validate.form('.form')) return;
+  let name = val('username'),
+    password = val('password'),
+    domain = window.location.href.indexOf('youths.cc') > -1 ? '.youths.cc' : 'localhost'
+
+  fetch('/rest/user/login', 'POST', { nameOrEmail: val('username'), password: val('password') }).then(r => {
+      toast('登录成功')
+      setTimeout(() => {
+        if (!!query('form')) {
+          location.href = query('from')
+        } else {
+          location.reload()
+        }
+      }, 5000)
+      cookies.set('accessToken', r.accessToken, { expires: 7, domain: domain })
+    })
+    .catch(e => {
+      toast(e.msg)
+    })
 })

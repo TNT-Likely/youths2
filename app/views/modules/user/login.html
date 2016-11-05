@@ -2,22 +2,13 @@
 <div class="body">
   <div class="form col-4 col-offset-4 col-m-12">
     <div class="form-block">
-      <input type="text" name='username' placeholder="输入用户名">
+      <input type="text" name='username' placeholder="输入用户名/邮箱" regex="/\S+/" msg="用户名/邮箱不能为空">
     </div>
     <div class="form-block">
-      <input type="text" name='email' placeholder="输入邮箱">
-    </div>
-    <div class="form-block">
-      <input type="password" placeholder="输入密码">
-    </div>
-    <div class="form-block">
-      <input type="password" placeholder="再次输入密码">
-    </div>
-    <div class="form-block vcode">
-      <input type="text" placeholder="输入验证码"><span class="vcodeImg"></span>
+      <input type="password" name="password" placeholder="输入密码" regex="/\S+/" msg="密码不能为空">
     </div>
     <div class="form-block"></div>
-    <button class="btn-primary">立即注册</button>
+    <button class="btn-primary">立即登录</button>
   </div>
 </div>
 <link href="/style/user/login.css" rel='stylesheet' />

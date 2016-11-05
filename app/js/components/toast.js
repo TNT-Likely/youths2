@@ -1,8 +1,9 @@
 class toast {
-  constructor(msg) {
+  constructor(msg, time) {
     require('../../scss/components/_toast.scss')
     if (typeof msg != 'string') return;
     this.msg = msg
+    this.time = time || 2800
     this.init()
   }
 
@@ -21,7 +22,7 @@ class toast {
     let self = this
     setTimeout(() => {
       self.hide()
-    }, 1800)
+    }, this.time)
   }
 
   hide() {
@@ -29,6 +30,6 @@ class toast {
   }
 }
 
-export default (msg) => {
-  return new toast(msg)
+export default (msg, time) => {
+  return new toast(msg, time)
 }
