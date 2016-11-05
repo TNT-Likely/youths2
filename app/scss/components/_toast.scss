@@ -1,0 +1,12 @@
+@import './var';
+@import './mixins';
+.toast {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  line-height: 70px;
+  background-color: $c_info;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
