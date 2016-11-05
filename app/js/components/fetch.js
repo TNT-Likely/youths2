@@ -8,13 +8,16 @@ export default (url, type, data) => {
     $.ajax({
       url: host + url,
       type: type || 'GET',
+      headers: { 'Content-Type': 'application/json' },
       data: !!data ? JSON.stringify(data) : '',
       success: function(result) {
-        resolve(result)
+        if (result.code == '0')
+          resolve(result.data)
+        else
+          reject(result.msg)
       },
       error: function(err) {
-        // toast('网络连接失败')
-        console.log('网络连接失败')
+        toast('网络连接失败')
       }
     })
   })

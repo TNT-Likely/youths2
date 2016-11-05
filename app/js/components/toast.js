@@ -29,4 +29,6 @@ class toast {
   }
 }
 
-export default toast
+export default (msg) => {
+  return new toast(msg)
+}

@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "normalize.css": "^5.0.0",
-    "npm-zepto": "^1.1.7"
+    "npm-zepto": "^1.1.7",
+    "zepto": "^1.2.0"
   }
 }

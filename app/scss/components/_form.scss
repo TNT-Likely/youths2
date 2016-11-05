@@ -17,7 +17,7 @@
       position: relative;
       span {
         @include inline-block(100px, $input_height);
-        background: #000;
+        background-size: 100% 100%;
         position: absolute;
         border-bottom-right-radius: $input_radius;
         border-top-right-radius: $input_radius;
