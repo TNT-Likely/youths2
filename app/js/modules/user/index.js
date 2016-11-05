@@ -1,4 +1,4 @@
-require('../../../scss/pages/index.scss')
+require('../../../scss/pages/user/index.scss')
 
 import fetch from '../../components/fetch'
 

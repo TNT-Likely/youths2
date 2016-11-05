@@ -11,8 +11,16 @@
     <a class="brand" href="/"><span>Y</span>ouths</a>
     <ul class="nav">
       <li><a href="/" class="text">首页</a></li>
-      <li><a href="javascript:void()" class="btn-primary" id="login">登录</a></li>
-      <li><a href="javascript:void()" class="btn-primary-outline" id="register">注册</a></li>
+      <li id="login"><a href="javascript:void()" class="btn-primary">登录</a></li>
+      <li id="register"><a href="javascript:void()" class="btn-primary-outline">注册</a></li>
+      <li class="dropdown hide" id="info">
+        <a href="#">好几年</a>
+        <ul class="dropdown-menu">
+          <li><a href="/user/index">个人主页</a></li>
+          <li><a href="">充值</a></li>
+          <li><a href="javascript:void(0)" id="logout">登出</a></li>
+        </ul>
+      </li>
     </ul>
   </header>
   {% block content %}{% endblock %}

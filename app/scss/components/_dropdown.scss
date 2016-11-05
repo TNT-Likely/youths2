@@ -1,0 +1,30 @@
+@import './var';
+@import './mixins';
+.dropdown {
+  position: relative;
+  &:hover {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+  .dropdown-menu {
+    display: none;
+    padding-left: 0;
+    position: absolute;
+    list-style-type: none;
+    li {
+      background-color: #fff;
+      a {
+        width: $dropdown_width;
+        line-height: $dropdown_height;
+        color: $c_gray;
+        text-align: center;
+        transition: all .3s;
+        &:hover {
+          background-color: $c_primary;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

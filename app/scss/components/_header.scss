@@ -1,4 +1,5 @@
 @import './var';
+@import './dropdown';
 .header {
   position: fixed;
   top: 0;
@@ -6,12 +7,9 @@
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: #fff;
   box-shadow: 0 0 3px #bbb;
   height: 70px;
-  a {
-    color: #fff;
-  }
   .brand {
     display: inline-block;
     line-height: 70px;
@@ -25,32 +23,43 @@
     list-style-type: none;
     margin-top: 0;
     margin-bottom: 0;
-    li {
+    >li {
       float: left;
       padding: 15px;
       a {
+        color: #000;
         display: inline-block;
         line-height: 40px;
         font-size: $f_big;
         transition: all 0.4s cubic-bezier(.7, 1, .7, 1);
+        &.text {
+          &:hover,
+          &.active {
+            color: $c_primary;
+            border-bottom: 3px solid $c_primary;
+          }
+        }
       }
     }
   }
   &.static {
-    background-color: #fff;
-    a {
-      color: #000;
-      &.text {
-        &:hover,
-        &.active {
-          color: $c_primary;
-          border-bottom: 3px solid $c_primary;
-        }
-      }
+    a,
+    ul.nav>li>a,
+    .dropdown-menu li a {
+      color: #fff;
+    }
+    .dropdown-menu li,
+    & {
+      background-color: rgba(255, 255, 255, .5);
     }
   }
   //overwrite
   .btn-primary-outline {
     background-color: transparent;
+  }
+  ul.dropdown-menu {
+    top: 70px;
+    left: -18px;
+    li {}
   }
 }
