@@ -1,0 +1,30 @@
+@import '~normalize.css';
+@import '../../components/mixins';
+@import '../../components/common';
+@import '../../components/grid';
+@import '../../components/header';
+@import '../../components/footer';
+@import '../../components/btn';
+@import '../../components/form';
+.body {
+  padding-bottom: 100px;
+  text-align: center;
+  font-size: 30px;
+  .inner {
+    display: none;
+  }
+  i {
+    @include inline-block(150px, 150px);
+  }
+  .success {
+    i {
+      @include bgi('isuccess.png');
+    }
+  }
+  .failed {
+    i {
+      @include bgi('ifailed.png');
+    }
+    color:$c_danger;
+  }
+}

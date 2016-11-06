@@ -30,6 +30,10 @@ body {
   margin: 0 auto -50px;
 }
 
+.inner {
+  @extend %middle;
+}
+
 input {
   outline: 0;
   border: 1px solid $c_primary;

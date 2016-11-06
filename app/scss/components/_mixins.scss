@@ -18,6 +18,13 @@
   border-radius: $button_radius;
 }
 
+%middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @mixin btn($color, $color_hover) {
   @extend %plr;
   @extend %btn;
