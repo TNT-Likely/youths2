@@ -33,7 +33,11 @@ $('.form button').click(() => {
           // location.reload()
       })
       .catch(e => {
-        toast('注册失败')
+        if (e.code == 40607) {
+          toast('验证码错误')
+        } else {
+          toast('注册失败')
+        }
       })
   }
 })
