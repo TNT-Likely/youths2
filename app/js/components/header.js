@@ -23,8 +23,9 @@ $('#register a').click(() => {
 })
 
 fetch('/rest/user/status').then(r => {
-  $('#login,#register').hide()
   $('#info').show()
+}).catch(e => {
+  $('#login,#register').show()
 })
 
 $('#logout').click(() => {
