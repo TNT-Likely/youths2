@@ -22,7 +22,7 @@ export default function() {
       presets: ['latest']
     },
     resolve: {
-      modulesDirectories: ['../node_modules', '../app/js/components']
+      modulesDirectories: ['../node_modules', '../app/js/components','../app/scss/pages']
     },
     sassLoader: {},
     plugins: []
