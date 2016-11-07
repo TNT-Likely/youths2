@@ -8,7 +8,12 @@
  import webpackConfDev from './config/webpack.config.dev'
  import webpackConfProd from './config/webpack.config.prod'
 
- gulp.task('clean', function() {
+ //生成模块
+ gulp.task('create', () => {
+   require('./script/create').default()
+ })
+
+ gulp.task('clean', () => {
    return del.sync([
      config.root.dist
    ], {

@@ -25,6 +25,7 @@
     "gulp-swig": "^0.8.0",
     "gulp-util": "^3.0.7",
     "html-loader": "^0.4.4",
+    "minimist": "^1.2.0",
     "node-sass": "^3.10.1",
     "resolve-url-loader": "^1.6.0",
     "sass-loader": "^4.0.2",
