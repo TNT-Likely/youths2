@@ -15,7 +15,7 @@ $('.form button').click(() => {
   fetch('/rest/user/login', 'POST', { nameOrEmail: val('username'), password: val('password') }).then(r => {
       toast('登录成功')
       setTimeout(() => {
-        if (!!query('form')) {
+        if (!!query('from')) {
           location.href = query('from')
         } else {
           location.reload()
