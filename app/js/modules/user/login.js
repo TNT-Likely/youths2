@@ -1,5 +1,5 @@
 require('../../../scss/pages/user/login.scss')
-require('header')
+require('header').default()
 import { toast, fetch, validate, query, cookies } from 'tool'
 
 let val = (field) => {

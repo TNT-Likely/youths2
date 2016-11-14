@@ -1,7 +1,6 @@
 require('../../../scss/pages/user/index.scss')
-require('header')
-import { fetch } from 'tool'
+import { fetch, header } from 'tool'
 
-// fetch('/').then(r => {
-
-// })
+header().then(r => {
+  console.log(r)
+})

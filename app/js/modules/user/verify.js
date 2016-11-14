@@ -1,5 +1,5 @@
 require('../../../scss/pages/user/verify.scss')
-require('header')
+require('header').default()
 import { toast, fetch, validate, query, cookies } from 'tool'
 
 fetch('/rest/user/verify', 'POST', { uid: query('uid'), token: query('token') }).then(r => {

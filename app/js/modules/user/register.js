@@ -1,6 +1,6 @@
 require('../../../scss/pages/user/register.scss')
 require('captcha').default()
-require('header')
+require('header').default()
 import { toast, fetch, validate, query, cookies } from 'tool'
 
 $(document).on('blur', '[name="username"]', () => {

@@ -12,3 +12,9 @@ module.exports.fetch = require('./fetch').default
 
 //cookie操作
 module.exports.cookies = require('js-cookie')
+
+//配置中心
+module.exports.config = require('./config').default
+
+//用户信息
+module.exports.header = require('./header').default
