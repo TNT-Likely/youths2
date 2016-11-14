@@ -25,8 +25,7 @@ $('#register a').click(() => {
 $('#logout').click(() => {
   fetch('/rest/user/logout').then(() => {
     toast('注销成功')
-    $('#login,#register').show()
-    $('#info').hide()
+    if (config.needLogin.indexOf(location.pathname) > -1) location.href = '/'
   })
 })
 
