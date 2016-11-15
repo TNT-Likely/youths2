@@ -7,10 +7,11 @@
 @import '../../components/btn';
 @import '../../components/form';
 .body {
-  @include bgi('index_bg2.jpg');
-  padding-top: 200px;
-  padding-bottom: 100px;
-  .form {
-    background-color: rgba(0, 0, 0, .3);
-  }
+  // background-color: $c_bg;
+  // @include bgi('index_bg2.jpg');
+  // padding-top: 200px;
+  // padding-bottom: 100px;
+  // .form {
+    // background-color: rgba(0, 0, 0, .3);
+  // }
 }
