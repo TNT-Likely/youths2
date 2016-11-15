@@ -1,4 +1,4 @@
-require('../../../scss/pages/user/index.scss')
+require('user/index.scss')
 import { fetch, header } from 'tool'
 
 header().then(r => {

@@ -1,4 +1,4 @@
-require('../../../scss/pages/user/login.scss')
+require('user/login.scss')
 require('header').default()
 import { toast, fetch, validate, query, cookies } from 'tool'
 

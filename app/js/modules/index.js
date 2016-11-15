@@ -1,4 +1,4 @@
 require('header').default()
-require('../../scss/pages/index.scss')
+require('index.scss')
 
 console.log('yes')

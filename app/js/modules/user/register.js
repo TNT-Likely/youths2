@@ -1,4 +1,4 @@
-require('../../../scss/pages/user/register.scss')
+require('user/register.scss')
 require('captcha').default()
 require('header').default()
 import { toast, fetch, validate, query, cookies } from 'tool'
