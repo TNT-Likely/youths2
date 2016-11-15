@@ -24,7 +24,12 @@ $('#register a').click(() => {
 $('#logout').click(() => {
   fetch('/rest/user/logout').then(() => {
     toast('注销成功')
+
+    //需要登录的页面跳回首页
     if (config.needLogin.indexOf(location.pathname) > -1) location.href = '/'
+
+    //不需要登录的页面刷新
+    else location.reload()
   })
 })
 
@@ -38,11 +43,11 @@ export default () => {
       if (config.mustLogout.indexOf(location.pathname) > -1) {
         location.href = query('from') || '/'
       } else {
-        //用户已登陆回调
+        //用户已登录回调
         resolve(r);
       }
     }).catch(e => {
-      //显示登陆注册
+      //显示登录注册
       $('#login,#register').show()
 
       //登录验证(未登录去登录)
