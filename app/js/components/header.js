@@ -1,4 +1,3 @@
-window.$ = window.Zepto = require('npm-zepto')
 import { fetch, toast, query, config } from 'tool'
 
 //监听滚动事件

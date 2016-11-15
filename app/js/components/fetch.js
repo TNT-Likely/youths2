@@ -1,5 +1,5 @@
-import { toast, cookies } from 'tool'
 window.$ = window.Zepto = require('npm-zepto')
+import { toast, cookies } from 'tool'
 let host = window.location.href.indexOf('youths.cc') > -1 ? 'http://a.youths.cc' : 'http://localhost:3030'
 
 
