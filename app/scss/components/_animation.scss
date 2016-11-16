@@ -23,6 +23,25 @@ $animation_delay:.6s;
   // }
 }
 
+@keyframes rainbow {
+  0%,
+  100% {
+    background-color: $c_primary;
+  }
+  16% {
+    background-color: $c_success;
+  }
+  32% {
+    background-color: $c_info;
+  }
+  48% {
+    background-color: $c_warning;
+  }
+  64% {
+    background-color: $c_danger;
+  }
+}
+
 .a-fadeIn {
   animation-name: fadeInLeft;
   animation-duration: $animation_duration;
