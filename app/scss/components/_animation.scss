@@ -11,6 +11,18 @@ $animation_delay:.6s;
   }
 }
 
+@keyframes pageIndex {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 120% 120%;
+  }
+  // 100% {
+  //   background-size: 100% 100%;
+  // }
+}
+
 .a-fadeIn {
   animation-name: fadeInLeft;
   animation-duration: $animation_duration;
