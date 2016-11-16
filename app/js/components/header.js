@@ -1,4 +1,4 @@
-import { fetch, toast, query, config } from 'tool'
+import { fetch, toast, query, config, bind } from 'tool'
 
 //监听滚动事件
 if ($('header').attr('class').indexOf('static') > -1) {
@@ -36,6 +36,9 @@ $('#logout').click(() => {
 export default () => {
   return new Promise((resolve, reject) => {
     fetch('/rest/user/status').then(r => {
+      //设置用户名
+      bind('#info>a', r.username)
+
       //显示用户信息
       $('#info').show()
 

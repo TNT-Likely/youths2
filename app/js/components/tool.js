@@ -18,3 +18,6 @@ module.exports.config = require('./config').default
 
 //用户信息
 module.exports.header = require('./header').default
+
+//绑定数据
+module.exports.bind = require('./bind').default
