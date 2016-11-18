@@ -7,8 +7,6 @@
         .col-#{$i} {
           float: left;
           width: percentage($i / $columns);
-          padding-left: $grap;
-          padding-right: $grap;
         }
         .col-offset-#{$i} {
           margin-left: percentage($i / $columns);
@@ -21,8 +19,6 @@
         .col-m-#{$i} {
           float: left;
           width: percentage($i / $columns);
-          padding-left: $grap;
-          padding-right: $grap;
         }
         .col-offset-m-#{$i} {
           margin-left: percentage($i / $columns);
