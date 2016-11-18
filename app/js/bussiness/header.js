@@ -56,9 +56,10 @@ export default () => {
       //登录验证(未登录去登录)
       if (config.needLogin.indexOf(location.pathname) > -1) {
         location.href = '/user/login?from=' + location.href
-      } else {
-        reject(e);
-      }
+      } 
+      // else {
+      //   reject(e);
+      // }
     })
   })
 }
