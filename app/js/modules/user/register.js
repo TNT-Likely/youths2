@@ -1,7 +1,7 @@
 require('user/register.scss')
 require('captcha').default()
 require('header').default()
-import { toast, fetch, validate, query, cookies } from 'tool'
+import { toast, fetch, validate, query, cookies, val } from 'tool'
 
 $(document).on('blur', '[name="username"]', () => {
   validate.exist('username')
@@ -10,10 +10,6 @@ $(document).on('blur', '[name="username"]', () => {
 $(document).on('blur', '[name="email"]', () => {
   validate.exist('email')
 })
-
-let val = (field) => {
-  return $(`[name=${field}]`).val()
-}
 
 $('.form button').click(() => {
   if (!validate.form('.form') || !validate.exist('username') || !validate.exist('email')) return;

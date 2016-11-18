@@ -13,6 +13,10 @@ $c_danger_hover: #d35400;
 $c_invest:#34495e;
 $c_invest_hover:#2c3e50;
 $c_bg:#edece4;
+//圆角
+$border_radius_base:10px;
+$border_radius_middle:10px;
+$border_radius_large:10px;
 //字体
 $f_base:12px;
 $f_big:14px;
@@ -28,3 +32,8 @@ $form_padding:20px 10px;
 //下拉列表
 $dropdown_width:100px;
 $dropdown_height:30px;
+//表格
+$table_height:40px;
+$table_padding:0 20px;
+$table_border_radius:10px;
+$table_border_color:$c_bg;

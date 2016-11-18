@@ -1,0 +1,13 @@
+@import './var';
+@import './mixins';
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  td,
+  th {
+    height: $table_height;
+    border: 1px solid $table_border_color;
+    padding: $table_padding
+  }
+}

@@ -1,6 +1,14 @@
 {% extends '../../layouts/index.html' %} {% block header%}重置密码{% endblock %}{% block content %}
 <div class="body">
-  <p>user/reset page</p>
+  <div class="form col-4 col-m-12 inner">
+    <div class="form-block">
+      <input type="password" name="password" regex="/^\S{6,16}$/" msg="请输入6-16位字符作为你的密码" placeholder="输入密码">
+    </div>
+    <div class="form-block">
+      <input type="password" name="password2" regex="/^\S{6,16}$/" msg="请输入6-16位字符作为你的确认密码" placeholder="再次输入密码">
+    </div>
+    <button class="btn-primary">重置密码</button>
+  </div>
 </div>
 <link href="/style/user/reset.css" rel='stylesheet' />
 <script src="/script/user/reset.js"></script>{% endblock %}

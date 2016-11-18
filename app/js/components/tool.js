@@ -16,8 +16,8 @@ module.exports.cookies = require('js-cookie')
 //配置中心
 module.exports.config = require('./config').default
 
-//用户信息
-module.exports.header = require('./header').default
-
 //绑定数据
 module.exports.bind = require('./bind').default
+
+//获取输入框值
+module.exports.val = require('./val').default

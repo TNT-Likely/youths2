@@ -1,19 +1,16 @@
-{% extends '../../layouts/index.html' %}{% block header%}个人中心{% endblock %}{% block content %}
-<div class="body">
-  <div class="personal_info col-2 col-m-12">
-    <span class="avatar"></span>
-    <p>532837139@qq.com</p>
-    <p>2016年10月22日加入</p>
-    <hr />
-    <ul class="dropdown-menu">
-      <li><a href="">个人主页</a></li>
-      <li><a href="">充值</a></li>
-      <li>
-        <a href=""></a>
-      </li>
-    </ul>
-  </div>
-  <div class="col-8 col-m-12">xxx</div>
-</div>
+{% extends '../../layouts/user.html' %}{% block header%}个人中心{% endblock %}{% block userContent %}
+<p class="amount">可用余额: <span></span>元 <a href="/user/recharge" class="btn-primary-outline btn-recharge">充值</a></p>
+<table class="table">
+  <tr>
+    <th>交易类型</th>
+    <th>交易金额</th>
+    <th>交易时间</th>
+  </tr>
+  <tr>
+    <td>充值</td>
+    <td>100.00</td>
+    <td>2016年11月22日</td>
+  </tr>
+</table>
 <link href="/style/user/index.css" rel='stylesheet' />
 <script src="/script/user/index.js"></script> {% endblock %}

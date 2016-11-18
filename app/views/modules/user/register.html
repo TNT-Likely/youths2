@@ -14,7 +14,7 @@
       <input type="password" name="password2" regex="/^\S{6,16}$/" msg="请输入6-16位字符作为你的确认密码" placeholder="再次输入密码">
     </div>
     <div class="form-block vcode">
-      <input type="text" name="vcode" placeholder="输入验证码"><span class="vcodeImg"></span>
+      <input type="text" name="vcode" placeholder="输入验证码" regex="/\S+/" msg="验证码不能为空"><span class="vcodeImg"></span>
     </div>
     <div class="form-block"></div>
     <button class="btn-primary">立即注册</button>

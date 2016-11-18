@@ -1,10 +1,4 @@
-@import '~normalize.css';
-@import '../../components/mixins';
-@import '../../components/common';
-@import '../../components/grid';
-@import '../../components/header';
-@import '../../components/footer';
-@import '../../components/btn';
+@import '../../bussiness/index';
 @import '../../components/form';
 @import '../../components/spinner';
 .body {
@@ -13,6 +7,10 @@
   // padding-top: 200px;
   // padding-bottom: 100px;
   // .form {
-    // background-color: rgba(0, 0, 0, .3);
+  // background-color: rgba(0, 0, 0, .3);
   // }
+  .label {
+    text-align: center;
+  }
+  a {}
 }

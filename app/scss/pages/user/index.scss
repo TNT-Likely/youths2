@@ -1,26 +1,12 @@
-@import '~normalize.css';
-@import '../../components/mixins';
-@import '../../components/common';
-@import '../../components/grid';
-@import '../../components/header';
-@import '../../components/footer';
-@import '../../components/btn';
-@import '../../components/form';
+@import '../../bussiness/user';
+@import '../../components/table';
 .body {
-  background-color: $c_bg;
-  padding-top: 90px;
-  padding-bottom: 100px;
-  .personal_info {
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    .avatar {
-      @include inline-block(100px, 100px);
-      @include bgi('index_bg1.jpg');
-      border-radius: 100%;
+  .content {
+    .btn-recharge {
+      margin-left: 30px;
     }
-    ul {
-      list-style-type: none;
+    .amount {
+      font-size: 24px;
     }
   }
 }

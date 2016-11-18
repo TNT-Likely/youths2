@@ -1,9 +1,14 @@
 class toast {
-  constructor(msg, time) {
+  constructor(msg, time, callback) {
     require('../../scss/components/_toast.scss')
     if (typeof msg != 'string') return;
     this.msg = msg
-    this.time = time || 2800
+    if (typeof time == 'function') {
+      this.callback = time
+    } else {
+      this.time = time || 2800
+      this.callback = callback
+    }
     this.init()
   }
 
@@ -22,6 +27,7 @@ class toast {
     let self = this
     setTimeout(() => {
       self.hide()
+      if (typeof self.callback == 'function') self.callback()
     }, this.time)
   }
 
@@ -30,6 +36,7 @@ class toast {
   }
 }
 
-export default (msg, time) => {
-  return new toast(msg, time)
+//msg[required],time[option],callback[option]
+export default (msg, time, callback) => {
+  return new toast(msg, time, callback)
 }

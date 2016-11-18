@@ -1,6 +1,14 @@
 {% extends '../../layouts/index.html' %}{% block header%}忘记密码{% endblock %} {% block content %}
 <div class="body">
-  <p>user/forget page</p>
+  <div class="form col-4 col-m-12 inner">
+    <div class="form-block">
+      <input type="text" name='nameOrEmail' placeholder="输入用户名/邮箱" regex="/\S+/" msg="用户名/邮箱不能为空">
+    </div>
+    <div class="form-block vcode">
+      <input type="text" name="vcode" placeholder="输入验证码" regex="/\S+/" msg="验证码不能为空"><span class="vcodeImg"></span>
+    </div>
+    <button class="btn-primary">重置密码</button>
+  </div>
 </div>
 <link href="/style/user/forget.css" rel='stylesheet' />
 <script src="/script/user/forget.js"></script>{% endblock %}

@@ -1,6 +1,5 @@
 require('user/index.scss')
-import { fetch, header } from 'tool'
+import { fetch, bind } from 'tool'
+import { user } from 'bussiness'
 
-header().then(r => {
-  console.log(r)
-})
+user().then(r => {})

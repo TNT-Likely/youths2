@@ -1,10 +1,6 @@
 require('user/login.scss')
 require('header').default()
-import { toast, fetch, validate, query, cookies } from 'tool'
-
-let val = (field) => {
-  return $(`[name=${field}]`).val()
-}
+import { toast, fetch, validate, query, cookies, val } from 'tool'
 
 $('.form button').click(() => {
   if (!validate.form('.form')) return;

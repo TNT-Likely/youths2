@@ -1,0 +1,16 @@
+{% extends './index.html' %}{% block content %}
+<div class="body">
+  <div class="personal_info col-2 col-m-12">
+    <!-- <span class="avatar"></span> -->
+    <p class="email">邮箱: <span><!-- 532837139@qq.com --></span></p>
+    <!-- <p>2016年10月22日加入</p> -->
+    <ul class="dropdown-menu">
+      <li class="active"><a href="/user/index">个人主页</a></li>
+      <li><a href="/user/recharge">充值</a></li>
+    </ul>
+  </div>
+  <div class="col-10 col-m-12 content">
+    {% block userContent %}{% endblock %}
+  </div>
+</div>
+ {% endblock %}
