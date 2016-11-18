@@ -1,5 +1,5 @@
 import { fetch, toast, query, config, bind } from 'tool'
-
+ 
 //监听滚动事件
 if ($('header').attr('class').indexOf('static') > -1) {
   $(window).scroll(function() {
