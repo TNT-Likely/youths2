@@ -1,6 +1,13 @@
 @import '../../bussiness/user';
 .body {
   .content {
-
+    text-align: center;
+    .wechat,
+    .ali {
+      @include inline-block(200px, 200px);
+    }
+    .ali {
+      @include bgi('zhi2.png');
+    }
   }
 }

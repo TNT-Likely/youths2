@@ -8,7 +8,7 @@ export default function() {
   options = Object.assign({ watch: true }, options)
   options.output.filename = 'script/[name].js'
   options.module.loaders.push({
-    test: /\.(png|jpg|gif|woff|woff2)$/,
+    test: /\.(png|jpg|gif|jpeg|woff|woff2)$/,
     loader: 'url-loader?limit=8192&name=img/[name].[ext]'
   }, {
     test: /\.scss$/,

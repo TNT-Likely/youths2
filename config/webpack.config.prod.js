@@ -9,7 +9,7 @@ export default function(platform) {
   options = options(platform)
   options.output.filename = 'script/[name].[chunkhash:6].js'
   options.module.loaders.push({
-    test: /\.(png|jpg|gif|woff|woff2)$/,
+    test: /\.(png|jpg|gif|jpeg|woff|woff2)$/,
     loader: 'url-loader?limit=8192&name=img/[name].[hash:6].[ext]'
   }, {
     test: /\.scss$/,
