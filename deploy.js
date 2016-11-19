@@ -3,7 +3,7 @@ import http from 'http'
 import config from './config'
 import finalhandler from 'finalhandler'
 
-let serve = serveStatic(config.root.dist, { extensions: ['html', 'htm'], cacheControl: false })
+let serve = serveStatic(config.root.dist, { extensions: ['html', 'htm']})
 
 // Create server 
 let server = http.createServer((req, res) => {
